@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 
 app=Flask(__name__)
-#local database 'postgresql://<username-here>:<password-here>@localhost/<database-name>'
-# DATABASE_URL: postgres://cylnvufywhqarg:729d9e05229424f480db778bcb29814264652adc17efa9567845a0e4ae789b26@ec2-54-196-65-186.compute-1.amazonaws.com:5432/dc3054g9mupq68
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://cylnvufywhqarg:729d9e05229424f480db778bcb29814264652adc17efa9567845a0e4ae789b26@ec2-54-196-65-186.compute-1.amazonaws.com:5432/dc3054g9mupq68?sslmode=require"
+#local database: 'postgresql://<username-here>:<password-here>@localhost/<database-name>'
+#DATABASE_URL: "postgres://knmvydibdgtdar:90c0de41d7aec8ad8bfb0280c721bd04664bb930ee8cfe104685acfdbb2d2921@ec2-35-174-56-18.compute-1.amazonaws.com:5432/d83kspcknrffuv"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://knmvydibdgtdar:90c0de41d7aec8ad8bfb0280c721bd04664bb930ee8cfe104685acfdbb2d2921@ec2-35-174-56-18.compute-1.amazonaws.com:5432/d83kspcknrffuv"
 db = SQLAlchemy(app)
 
 class Data(db.Model):
@@ -14,9 +14,9 @@ class Data(db.Model):
     email_col= db.Column(db.String(120), unique=True)
     age_col= db.Column(db.Integer)
 
-    def __init__(self, email_, age_):
-        self.email_col = str(email_)
-        self.age_col = int(age_)
+    def __init__(self, email, age):
+        self.email_col = str(email)
+        self.age_col = int(age)
 
         
 
