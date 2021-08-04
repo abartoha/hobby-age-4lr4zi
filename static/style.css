@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap');
+
+body {
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.root{
+    font-family: 'Indie Flower','Waiting for the Sunrise', cursive;
+    height: 100vh;
+}
+
+::placeholder{
+    color: gray;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.input-field{
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.input-field:hover{
+    transform: scaleY(1.2);
+}
+
+.submit-btn{
+    background-color: white;
+    border: 1px solid black;
+    outline-offset: -2px;
+    transition: outline-offset;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.submit-btn:hover{
+    outline: 1px solid black;
+    outline-offset: 2px;
+}
+
+.interesting{
+    font-size: 1.5rem;
+}
